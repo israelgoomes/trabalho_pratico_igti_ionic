@@ -1,0 +1,11 @@
+{
+  "produtos": [
+    {
+      "id": 2,
+      "nmProduto": "Teste editado 2",
+      "preco": "Teste",
+      "description": "Teste",
+      "img": "https://i.udemycdn.com/course/240x135/1325912_2431.jpg"
+    }
+  ]
+}

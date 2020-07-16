@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="cadastroProduto()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-content>
+  <ion-card *ngFor="let produto of produtos">
+    <ion-card-header>
+      <ion-icon
+        id="delete"
+        name="trash"
+        (click)="delete(produto)"
+        style="float: right;"
+      ></ion-icon>
+      <ion-icon
+        id="edit"
+        name="create"
+        (click)="edit(produto)"
+        style="float: right;"
+      ></ion-icon>
+      <img [src]="produto.img" />
+    </ion-card-header>
+    <ion-card-content>
+      Nome: {{produto.nmProduto}} <br />
+      preco: {{produto.preco}} <br />
+      description: {{produto.description}}<br />
+    </ion-card-content>
+  </ion-card>
+
+  <div></div>
+</ion-content>
